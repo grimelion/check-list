@@ -1,0 +1,114 @@
+@font-face {
+    font-family: circular-black;
+    src: url('./assets/circular-black.woff2');
+}
+
+@font-face {
+    font-family: circular-bold;
+    src: url('./assets/circular-bold.woff2');
+}
+
+@font-face {
+    font-family: circular-book;
+    src: url('./assets/circular-book.woff2');
+}
+
+@font-face {
+    font-family: circular-light;
+    src: url('./assets/circular-light.woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  font-family: circular-book;
+  background: #F5F6FA;
+  font-size: 16px;
+  color: #648496;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: circular-bold;
+  letter-spacing: 0;
+  color: #648496;
+}
+
+a {
+  text-decoration: none;
+  color: #aab4c2;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+}
+
+/*==============================================================================
+Global button styles =========================================================*/
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 13px 13px;
+  transition: all .2s ease;
+  letter-spacing: .25px;
+  min-width: 130px;
+  white-space: normal;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: middle;
+  background: linear-gradient(to right, #49ACDA,#64A2F8);
+  box-shadow: 0 8px 34px 4px rgba(0,0,0,.1);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.content-container {
+  position: relative;
+  width: 78%;
+  max-width: 1300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*==============================================================================
+Global input styles ==========================================================*/
+
+.input {
+  width: 100%;
+  color: #648496;
+  caret-color: #648496;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: circular-bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+}
+
+.input::-webkit-input-placeholder {
+  color: #aab4c2;
+}

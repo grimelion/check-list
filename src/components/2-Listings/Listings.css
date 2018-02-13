@@ -1,0 +1,264 @@
+.listings-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 5em;
+}
+
+.searchbar-filter-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: #F5F6FA;
+  z-index: 999;
+}
+
+.searchbar-container {
+  margin: 0 auto;
+  width: 78%;
+  max-width: 1300px;
+  text-align: left;
+  border-bottom: 2px solid #d2dae8;
+  /*border-bottom: 1px solid #bfcadb;*/
+  margin-bottom: 4.5em;
+  transition: all .3s;
+}
+
+.searchbar-icon-container {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+}
+
+.searchbar-icon {
+  height: 27px;
+  width: 27px;
+  margin-left: 24px;
+  transform: translateY(7px);
+  opacity: .8;
+}
+
+.searchbar-container .input {
+  font-size: 20px;
+  width: 90%;
+  padding: 20px;
+}
+
+.filter-container {
+  margin: 0 auto;
+  width: 78%;
+  max-width: 1300px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #d2dae8;
+  margin-bottom: 5.5em;
+  display: flex;
+}
+
+.input-container {
+  position: relative;
+  margin-left: 20px;
+}
+
+.down-arrow {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: auto;
+  width: 9px;
+  opacity: .3;
+  transition: all .2s;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+.input-container:hover .down-arrow {
+  opacity: 1;
+}
+
+#category-filter {
+  width: 146px;
+  border-right: 2px solid #d2dae8;
+  padding-right: 6px;
+}
+
+#tag-filter {
+  width: 224px;
+  border-right: 2px solid #d2dae8;
+}
+
+#newest-oldest-filter {
+  margin-left: auto;
+  margin-right: 20px;
+  width: 132px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#price-filter {
+  margin-right: 20px;
+  border-right: 2px solid #cad4e4;
+  width: 158px;
+  overflow: hidden;
+}
+
+#category-filter .down-arrow, #tag-filter .down-arrow, #price-filter .down-arrow {
+  right: 28px;
+}
+
+select {
+  padding: 5px 8px;
+  width: 100%;
+  font-size: 13px;
+  font-family: circular-black;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  color: #aab4c2;
+  letter-spacing: -0.1px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+select:hover {
+  color: #648496;
+}
+
+select:focus {
+  outline: none;
+}
+
+.list-item-parent-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 31.3333% 31.3333% 31.3333%;
+  grid-gap: 3%;
+  text-align: left;
+}
+
+.list-item-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  background: #fff;
+  box-shadow: 0 10px 34px 10px rgba(0,0,0,.1);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.list-item-parent-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 68%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.list-item-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding-top: 68%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .3s;
+  z-index: 99;
+
+}
+
+.list-item-image-container:hover {
+  transform: scale(1.05);
+}
+
+.list-item-image-container:hover::after {
+  background: rgba(11,11,11,.4)
+}
+
+.list-item-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  background: rgba(11,11,11,0)
+}
+
+
+
+.list-item-price {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  /*text-shadow: 0 0 10px rgba(0,0,0, 1);*/
+  z-index: 99;
+}
+
+.list-item-title-container {
+  position: relative;
+  width: 100%;
+  padding: 8% 0 8% 24px;
+  z-index: 100;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-title-container h3 {
+  color: #648496;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.list-item-favorite {
+  right: 24px;
+  bottom: 21px;
+  font-size: 20px;
+  width: 68px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.list-item-favorite:hover .fa-heart-o, .list-item-favorite:hover .fa-heart {
+  transform: scale(1.15);
+}
+
+.fa-heart-o {
+  position: absolute;
+  top: 37%;
+  right: 24px;
+  color: #64A2F8;
+  transition: all .2s ease-out;
+  opacity: 1;
+}
+
+.fa-heart-o.selected {
+  opacity: 0;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 37%;
+  right: 24px;
+  color: #64A2F8;
+  transition: all .2s ease-out;
+  opacity: 0;
+}
+
+.fa-heart.selected {
+  opacity: 1;
+}
+
+#center {
+  text-align: center;
+}
